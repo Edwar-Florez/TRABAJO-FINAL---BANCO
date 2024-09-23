@@ -1,0 +1,517 @@
+/* Estilos universales para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Estilos de encabezados */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.9em;
+    color: #222;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+    color: white;
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1.25rem;
+}
+
+/* Navegación */
+header {
+    background: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+header img{
+    width: 25%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para la sección 2 */
+.sec2 {
+    height: 400px;
+    text-align: center;
+}
+
+.sec2 h1 {
+    margin: 60px;
+    font-size: 50px;
+    color: black;
+}
+
+/* Estilos para la sección 3 */
+.sec3 {
+    height: 500px;
+    text-align: center;
+    background-color: #222;
+    border-radius: 20px 20px 0 0;
+}
+
+.sec3 h1, .sec3 h2 {
+    color: white;
+    padding: 40px;
+}
+
+.sec3 h1 {
+    font-size: 50px;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    position: relative;
+    background-image: url('/img/ini.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.container2 {
+    position: relative;
+    background-image: url('/img/nuevas_tarjetas.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.container22 {
+    position: relative;
+    background-image: url('/img/f1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.container2 h1{
+    margin-left: 100px;
+}
+
+/* Overlay oscuro para la imagen de fondo */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté sobre el overlay */
+.container .content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilo para la sección de términos y condiciones */
+.terms-section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.6s forwards; /* Aplicar animación */
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #000000;
+    font-size: 1.8rem;
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #007bff;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Estilo para los párrafos */
+p {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilo para la lista */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre los elementos de la lista */
+li:hover {
+    color: #007bff;
+}
+
+li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+/* Artículos */
+article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+}
+
+/* Estilos del pie de página */
+.footer {
+    background-color: #002147;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-radius: 0 0 20px 20px;
+}
+
+.footer2 {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.contactatos {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.contactatos h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+    border-bottom: 2px solid #0077ff;
+    padding-bottom: 5px;
+}
+
+.contactatos p {
+    margin: 5px 0;
+}
+
+.contactatos a {
+    color: #0077ff;
+    text-decoration: none;
+}
+
+.contactatos a:hover {
+    text-decoration: underline;
+}
+
+.cont2 {
+    display: flex;
+}
+
+form {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.sec20 {
+    position: relative;
+    background-image: url('/img/pagar.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+.sec20 h1{
+    margin-left: 100px;
+}
+
+/* Estilos generales */
+.about-section {
+    background: white;
+    padding: 40px; /* Aumenta el padding */
+    margin: 20px auto; /* Centra la sección */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(20px); /* Desplazado hacia abajo */
+    animation: fadeInUp 0.5s forwards; /* Animación */
+    max-width: 800px; /* Ancho máximo */
+}
+
+/* Animación al hacer scroll */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+.about-section h3 {
+    margin-top: 15px;
+    color: #555;
+    transition: color 0.3s ease; /* Transición de color */
+}
+
+.about-section p {
+    margin-bottom: 10px;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(10px); /* Desplazado hacia abajo */
+    animation: slideIn 0.5s forwards; /* Animación */
+}
+
+.about-section ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.about-section ul li {
+    transition: transform 0.3s ease; /* Transición de transformación */
+}
+
+.about-section ul li:hover {
+    transform: translateX(5px); /* Efecto de desplazamiento al pasar el mouse */
+}
+
+/* Animación de párrafos */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animaciones en h3 y p */
+.about-section h3, .about-section p {
+    animation: fadeInUp 0.5s forwards;
+    animation-delay: 0.3s; /* Retraso en la animación */
+}
+.about-section h3 {
+    animation-delay: 0.5s; /* Retraso para h3 */
+}
+.about-section p {
+    animation-delay: 0.7s; /* Retraso para p */
+}
+
+.image-container img:hover{
+    transition: 1s;
+    width: 150px;
+}
+
+/* Consultas de medios para hacer el diseño responsivo */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    header img{
+        width: 25%;
+        margin-left: 30px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container {
+        height: auto;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .sec2 h1 {
+        font-size: 30px;
+        margin: 30px;
+    }
+    .sec2{
+        font-size: 30px;
+        margin: 30px;
+        height: 550px;
+
+    }
+    .sec20{
+        display: grid;
+        grid-column: initial;
+        height: 800px;
+    }
+    .container2{
+        display: grid;
+        grid-column: initial;
+        height: 800px;
+    }
+    .container2 h1{
+        margin-left: 0px;
+    }
+    .container22{
+        display: grid;
+        grid-column: initial;
+        height: 800px;
+    }
+    .container22 h1{
+        margin-left: 0px;
+    }
+    .sec20 h1{
+        margin-left: 20px;
+
+    }
+    
+    .sec3 h1 {
+        font-size: 40px;
+    }
+    .sec3{
+        font-size: 40px;
+        height: 1000px;
+
+    }
+    
+    article {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+    
+    .footer2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        max-width: 90%; /* Aumenta el ancho del formulario en pantallas pequeñas */
+    }
+}
