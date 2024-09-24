@@ -30,9 +30,53 @@ p {
     font-size: 1.25rem;
 }
 
+   /* Menú flotante */
+   .floating-menu {
+    position: fixed;
+    bottom: 500px;
+    right: 20px;
+    background-color: #000000;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el menú flotante desplegado */
+.floating-menu .menu-options {
+    display: none;
+    position: absolute;
+    bottom: -200px;
+    right: 0px;
+    background-color: #113044;
+    border-radius: 5px;
+    padding: 10px;
+    list-style: none;
+    text-align: right;
+}
+
+.floating-menu .menu-options li {
+    margin: 5px 0;
+}
+
+.floating-menu .menu-options li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mostrar el menú flotante cuando tiene la clase 'show' */
+.floating-menu.show .menu-options {
+    display: block;
+}
+
 /* Navegación */
 header {
-    background: #007bff;
+    background: #1B4965;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -64,11 +108,24 @@ nav ul li a {
 
 /* Estilos para la sección 2 */
 .sec2 {
-    height: 400px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
 }
 
 .sec2 h1 {
+    margin: 60px;
+    font-size: 50px;
+    color: black;
+}
+.sec200 {
+    height: 400px;
+    display: grid;
+    text-align: center;
+}
+
+.sec200 h1 {
     margin: 60px;
     font-size: 50px;
     color: black;
@@ -94,7 +151,7 @@ nav ul li a {
 /* Estilos para el contenedor principal */
 .container {
     position: relative;
-    background-image: url('/img/ini.jpg');
+    background-image: url('/TRABAJO-FINAL---BANCO/img/ini.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -108,7 +165,7 @@ nav ul li a {
 }
 .container2 {
     position: relative;
-    background-image: url('/img/nuevas_tarjetas.webp');
+    background-image: url('/TRABAJO-FINAL---BANCO/img/nuevas_tarjetas.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,7 +179,7 @@ nav ul li a {
 }
 .container22 {
     position: relative;
-    background-image: url('/img/f1.png');
+    background-image: url('/TRABAJO-FINAL---BANCO//img/f1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -189,7 +246,7 @@ h2::after {
     display: block;
     width: 50px;
     height: 4px;
-    background: #007bff;
+    background: #1B4965;
     margin: 10px auto;
     border-radius: 2px;
 }
@@ -215,14 +272,14 @@ li {
 
 /* Efecto al pasar el mouse sobre los elementos de la lista */
 li:hover {
-    color: #007bff;
+    color: #1B4965;
 }
 
 li::before {
     content: '✔';
     position: absolute;
     left: 0;
-    color: #007bff;
+    color: #1B4965;
 }
 
 /* Artículos */
@@ -234,7 +291,7 @@ article {
 
 /* Estilos del pie de página */
 .footer {
-    background-color: #002147;
+    background-color: #1B4965;
     color: #fff;
     padding: 20px 0;
     display: flex;
@@ -315,13 +372,13 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea:focus {
-    border-color: #007bff;
+    border-color: #1B4965;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 button {
-    background-color: #007bff;
+    background-color: #1B4965;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -376,7 +433,7 @@ button:hover {
 
 .about-section h2 {
     margin-bottom: 20px;
-    color: #007bff;
+    color: #1B4965;
     transition: color 0.3s ease; /* Transición de color */
 }
 
@@ -432,6 +489,11 @@ button:hover {
     width: 150px;
 }
 
+.nm{
+    max-width: 600px; margin: 20px auto; padding: 20px; border: 0px solid #ffffff; border-radius: 8px; background-color: #1B4965; 
+}
+
+
 /* Consultas de medios para hacer el diseño responsivo */
 @media (max-width: 768px) {
     header {
@@ -459,17 +521,38 @@ button:hover {
     
     .sec2 h1 {
         font-size: 30px;
-        margin: 30px;
+        margin: 0px;
     }
     .sec2{
+        display: grid;
+        font-size: 30px;
+        margin: 0px;
+        height: 650px;
+    }
+    .sec2 {
+        display: flex;
+        flex-direction: column; /* Coloca los divs en una columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    .sec3{
+        display: grid;
         font-size: 30px;
         margin: 30px;
-        height: 550px;
-
+        height: 750px;
     }
+    .sec3 {
+        display: flex;
+        flex-direction: column; /* Coloca los divs en una columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    
+    .image-container {
+        margin: 10px 0; /* Espaciado entre los divs */
+        text-align: center; /* Centra el texto en cada div */
+    }
+    
     .sec20{
-        display: grid;
-        grid-column: initial;
+        display:inline-block;
         height: 800px;
     }
     .container2{
@@ -512,6 +595,125 @@ button:hover {
     }
 
     form {
-        max-width: 90%; /* Aumenta el ancho del formulario en pantallas pequeñas */
+        max-width: 90%;
+        max-height: 600px; /* Aumenta el ancho del formulario en pantallas pequeñas */
     }
+    .container22{
+        font-size: 20px;
+    }
+    .nm{
+        max-width: 600px; margin: 20px auto; padding: 20px; border: 0px solid #ffffff; border-radius: 8px; background-color: #1B4965;
+    }
+    .sec20{
+        height: 1000px;
+    }
+    
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    header img{
+        width: 25%;
+        margin-left: 30px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container {
+        height: auto;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .sec2 h1 {
+        font-size: 30px;
+        margin: 30px;
+    }
+    .sec2{
+        display: grid;
+        font-size: 30px;
+        margin: 0px;
+        height: 260px;
+    }
+    .sec3{
+        display: grid;
+        font-size: 30px;
+        margin: 30px;
+        height: 750px;
+    }
+    .sec3 {
+        display: flex;
+        flex-direction: column; /* Coloca los divs en una columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    
+    .image-container {
+        margin: 10px 0; /* Espaciado entre los divs */
+        text-align: center; /* Centra el texto en cada div */
+    }
+    
+    .sec20{
+        display:inline-block;
+        height: 800px;
+    }
+    .container2{
+        display: grid;
+        grid-column: initial;
+        height: 800px;
+    }
+    .container2 h1{
+        margin-left: 0px;
+    }
+    .container22{
+        display: grid;
+        grid-column: initial;
+        height: 800px;
+    }
+    .container22 h1{
+        margin-left: 0px;
+    }
+    .sec20 h1{
+        margin-left: 20px;
+
+    }
+    
+    .sec3 h1 {
+        font-size: 40px;
+    }
+    .sec3{
+        font-size: 40px;
+        height: 1000px;
+
+    }
+    
+    article {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+    
+    .footer2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        max-width: 90%;
+        max-height: 600px; /* Aumenta el ancho del formulario en pantallas pequeñas */
+    }
+    .container22{
+        font-size: 20px;
+    }
+    .nm{
+        max-width: 600px; margin: 20px auto; padding: 20px; border: 0px solid #ffffff; border-radius: 8px; background-color: #1B4965;
+    }
+    .sec20{
+        height: 1000px;
+    }
+  }
